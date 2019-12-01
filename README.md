@@ -1,2 +1,2 @@
 # Bitbucket
-second attempt for WebDev final project
+Second attempt for WebDev final project. Last time I had some issues with my respository, so I decided to delete it, which accidentally removed all my progress...
