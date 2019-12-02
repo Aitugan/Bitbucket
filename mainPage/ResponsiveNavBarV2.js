@@ -20,3 +20,6 @@ const navSlide = () => {
 
 }
 navSlide();
+// const app = ()=> {
+//     navS
+// }

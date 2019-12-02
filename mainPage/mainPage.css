@@ -16,7 +16,8 @@ ul {
     padding: 0;
 }
 
-header {
+
+/* header {
     background: #353637;
     color: #fff;
     padding-top: 30px;
@@ -32,7 +33,6 @@ header a {
 }
 
 header li {
-    float: left;
     display: inline;
     padding: 0 20px 0 20px;
 }
@@ -59,7 +59,7 @@ header .current a {
 header a:hover {
     color: #ccc;
     font-weight: bold;
-}
+} */
 
 #showcase {
     min-height: 400px;

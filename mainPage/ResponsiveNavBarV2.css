@@ -11,14 +11,21 @@ nav {
     align-items: center;
     min-height: 8vh;
     font-family: 'Poppins', sans-serif;
-    background-color: #5d4954;
+    background-color: #0b6623;
 }
 
 .logo {
     color: rgb(226, 225, 226);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: 5px;
     font-size: 20px;
+}
+
+.logoImg {
+    background: url("img/ThreeBv2.png")no-repeat center center;
+    /* width: 30px;
+    height: 40px; */
+    padding: 50px;
 }
 
 .nav-links {
@@ -37,6 +44,10 @@ nav {
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: rgb(255, 255, 255);
 }
 
 .burger {
@@ -67,7 +78,7 @@ nav {
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #5D5954;
+        background-color: #0b6623;
         display: flex;
         flex-direction: column;
         align-items: center;
