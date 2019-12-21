@@ -1,0 +1,84 @@
+.row {
+    margin-top: 5em;
+    flex-wrap: wrap;
+}
+
+.side {
+    flex: 15%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.main {
+    flex: 85%;
+    background-color: white;
+    padding: 20px;
+}
+
+.stats {
+    background-color: rgb(204, 204, 204);
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    margin-top: 0.1em;
+    display: flex;
+}
+
+.stats span {
+    display: flex;
+}
+
+.stats img {
+    width: 25px;
+    /* padding: 10px; */
+}
+
+.ID {
+    flex: 5%;
+}
+
+.When {
+    flex: 15%;
+}
+
+.Title {
+    flex: 15%;
+}
+
+.Categories {
+    flex: 15%;
+}
+
+.Comments {
+    flex: 10%;
+}
+
+.Author {
+    flex: 8%;
+}
+
+.view {
+    flex: 5%;
+}
+
+.edit {
+    flex: 5%;
+}
+
+.delete {
+    flex: 5%;
+}
+
+footer {
+    margin-bottom: -10em;
+    position: absolute;
+    width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+    .view img,
+    .edit img,
+    .delete img {
+        display: none;
+    }
+}
