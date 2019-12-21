@@ -1,0 +1,39 @@
+main {
+    display: flex;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.decor {
+    /* margin-right: -5em; */
+}
+
+.feedbacks {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: -5em;
+    width: 700px;
+    height: 300px;
+}
+
+.feedbacks .box {
+    background: #ECF3FF;
+    margin-left: 0.5em;
+    width: 25%;
+}
+
+.feedbacks .box:before {
+    background: #ECF3FF;
+}
+
+.feedbacks .box:after {
+    background: #ECF3FF;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
