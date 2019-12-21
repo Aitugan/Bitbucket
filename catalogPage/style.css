@@ -1,0 +1,74 @@
+body {
+    overflow: unset;
+    overflow-x: hidden;
+}
+
+.page-title {
+    background: linear-gradient(to left, rgb(42, 81, 255), rgb(31, 154, 255));
+    padding-top: 4em;
+    color: rgb(217, 235, 255);
+    text-align: center;
+}
+
+.course-slider h2 {
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.course-slider {
+    margin-top: 3em;
+}
+
+.single-course {
+    margin: 3em;
+    display: flex;
+    border-top: 1px solid rgb(179, 179, 179);
+}
+
+.single-course img {
+    width: 200px;
+}
+
+.stars img {
+    width: 25px;
+}
+
+.badge {
+    display: flex;
+}
+
+.badge img {
+    width: 25px;
+    height: 30px;
+}
+
+.price {
+    display: flex;
+}
+
+.price p {
+    text-decoration: line-through;
+    margin-left: 1em;
+}
+
+footer {
+    margin: 2em;
+}
+
+@media screen and (max-width: 1300px) {
+    .recommendedCourses {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .recommendedCourses .card {
+        margin-top: 2em;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .single-course .course-image {
+        display: none;
+    }
+}
