@@ -1,0 +1,80 @@
+body {
+    overflow: hidden;
+}
+
+header {
+    margin: 0;
+}
+
+#subnavbar {
+    background-color: #ECF3FF;
+    padding: 3.7em 0em 0 0;
+    /* width: 80%; */
+}
+
+#subnavbar .nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+#subnavbar img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+#subnavbar li {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#subnavbar li a {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5em;
+    width: 100%;
+    height: 100%;
+}
+
+#subnavbar li p {
+    color: rgb(78, 78, 78);
+    font-size: 12px;
+}
+
+#subnavbar li a:hover {
+    background-color: rgb(216, 224, 238);
+}
+
+.categories {
+    display: none;
+}
+
+@media screen and (max-width: 1020px) {
+    #subnavbar li {
+        display: none;
+    }
+    .categories {
+        display: unset;
+    }
+    #subnavbar {
+        padding: 3em 0em 0 0;
+    }
+}
+
+.categories div {
+    display: flex;
+    padding-bottom: 0.5em;
+    padding-top: 1em;
+    padding: 1em 0.5em 0.5em;
+}
+
+.categories :hover {
+    background-color: rgb(216, 224, 238);
+    border: 1px solid rgb(168, 185, 216);
+}
+
+@media screen and (max-width: 1150px) {
+    #subnavbar .nav-links {
+        width: 100%;
+    }
+}

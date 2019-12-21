@@ -1,0 +1,18 @@
+header {
+    background: url("https://i.udemycdn.com/notices/home_banner/image/5e733138-2116-4fdd-a927-c27a916dc488.jpg") no-repeat center;
+    height: 600px;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    /* top: 4em; */
+}
+
+h1 {
+    text-align: center;
+}

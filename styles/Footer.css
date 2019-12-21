@@ -1,0 +1,41 @@
+.connectedUniversities {
+    background: rgb(248, 248, 248);
+    padding: 3em;
+}
+
+.connectedUniversities h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.universityLogos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.universityLogos img {
+    width: 200px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em;
+    font-size: 13px;
+    color: #a1a7b3;
+    border-bottom-width: 7px;
+    border-bottom-style: groove;
+    border-image: linear-gradient(to left, rgb(0, 21, 88) 0%, #0ddbdb 100%);
+    border-image-slice: 1;
+}
+
+footer a {
+    text-decoration: none;
+    margin: 1em;
+}
+
+.right {
+    margin: 2em;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/navBar.css">
+    <link rel="stylesheet" href="../styles/usersHeader.css">
+    <link rel="stylesheet" href="../styles/Footer.css">
+    <link rel="stylesheet" href="../styles/Collapse.css">
+
+
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>{{range .}}
+    <header>
+        <nav id="navbar">
+
+            <div class="logo">
+                <img src="../styles/images/icons/ThreeBv2.png" alt="">
+                <h4>ThreeB</h4>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Project</a></li>
+
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                <div class="line4"></div>
+            </div>
+
+        </nav>
+        <nav id="subnavbar">
+            <ul class="nav-links">
+                <li>
+                    <a href="#"><img src="../styles/images/icons/development.png"></img>
+                        <p>Development</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"><img src="../styles/images/icons/business.png"></img>
+                        <p>Business</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"><img src="../styles/images/icons/IT.png"></img>
+                        <p>IT</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"><img src="../styles/images/icons/officeOScompany.png"></img>
+                        <p>Office OS</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"><img src="../styles/images/icons/personalGrowth.png"></img>
+                        <p>Personal Growth</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"><img src="../styles/images/icons/design.png"></img>
+                        <p>Design</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"><img src="../styles/images/icons/marketing.png"></img>
+                        <p>Marketing</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"><img src="../styles/images/icons/health.png"></img>
+                        <p>Health</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"><img src="../styles/images/icons/music.png"></img>
+                        <p>Music</p>
+                    </a>
+                </li>
+            </ul>
+            <section class="categories">
+                <div>
+                    <img src="../styles/images/icons/squares.png">
+                    <p>Categories</p>
+                </div>
+            </section>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="course-header">
+
+            <div class="course-header-description">
+                <span>
+                <h1>{{.Title}}</h1>
+               <!-- !!!!!!!!!! -->
+                <h2>Изучение Java на простых примерах для новичков. Теория, практика, домашние задания и их разборы.</h2>
+            </span>
+                <span class="course-statistics">
+                    <span class="badge">
+                        <img src="../styles/images/icons/badge3.png" alt="">
+                        <p>Sales Leader</p>
+                    </span>
+                <span class="stars">
+                            <img src="../styles/images/icons/star.png" alt="">
+                            <img src="../styles/images/icons/star.png" alt="">
+                            <img src="../styles/images/icons/star.png" alt="">
+                            <img src="../styles/images/icons/star.png" alt="">
+                            <img src="../styles/images/icons/halfStar.png" alt="">
+                    </span>
+                <p>{{.Rating}}({{.RatesAmount}} rates)</p>
+                <p>{{.RegisteredStudents}} students registered</p>
+                </span>
+            </div>
+
+            <div class="course-image">
+                <div class="image">
+                    <img src="../styles/images/java.jpeg" alt="">
+                    <div class="scrollable-description">
+                        <span class="price">
+                            <h3>${{.Price}}</h3>
+                            <p>${{.Price}}</p>
+                        </span>
+                        <p>{{.Discount}}% OFF</p>
+                        <p>The price will be accessed for <b>20 more hours!</b></p>
+
+                        <button class="add-to-cart">Add to the cart</button>
+                        <button class="buy-now">Buy now</button>
+                        <p>Money back guarantee - 30 days</p>
+                        <span class="course-includes">
+                            
+                        <p><img src="../styles/images/icons/video.png" alt=""> {{.Hours}} hours video on demand</p>
+                        <p><img src="../styles/images/icons/document.png" alt=""> {{.Resources}} resource to download</p>
+                        <p><img src="../styles/images/icons/forever.png" alt=""> Full lifetime access</p>
+                        <p><img src="../styles/images/icons/smartphone.png" alt=""> Access via mobile devices and TV</p>
+                        <p><img src="../styles/images/icons/certificate.png" alt=""> Certificate of completion - {{.GivesCertificate}}</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="course-description">
+            <div class="expecteds">
+                <h3>What you will learn</h3>
+
+                <p><img src="../styles/images/icons/checkbox.png" alt=""> You will learn 52 basic Java topics in detail.
+                </p>
+                <p><img src="../styles/images/icons/checkbox.png" alt="">Get Ready for Oracle's Java Programmer I Exam
+                </p>
+                <p><img src="../styles/images/icons/checkbox.png" alt="">Learn to write programs of varying complexity
+                </p>
+                <p><img src="../styles/images/icons/checkbox.png" alt="">Learn to understand other programming languages with ease
+                </p>
+                <p><img src="../styles/images/icons/checkbox.png" alt="">Get to know and love the world of Object Oriented Programming
+                </p>
+            </div>
+            <div class="course-materials">
+                <span>
+                    <h3>Course materials</h3>
+                    <span>
+                        <p>Expand</p> 
+                        <p>40 lectures</p>
+                        <p>47:22:04</p>
+                    </span>
+                </span>
+                <button class="collapsible">Java for beginners: from scratch to Oracle certificate</button>
+                <div class="content">
+                    <span><p><img src="../styles/images/icons/video2.png" alt="">Learn Java Syntax</p><span><p>Preview</p><p>1:00:00</p></span></span>
+                    <span><p><img src="../styles/images/icons/video2.png" alt="">Learn Java Syntax</p><span><p>Preview</p><p>1:00:00</p></span></span>
+                    <span><p><img src="../styles/images/icons/video2.png" alt="">Learn Java Syntax</p><span><p>Preview</p><p>1:00:00</p></span></span>
+                    <span><p><img src="../styles/images/icons/video2.png" alt="">Learn Java Syntax</p><span><p>Preview</p><p>1:00:00</p></span></span>
+                    <span><p><img src="../styles/images/icons/video2.png" alt="">Learn Java Syntax</p><span><p>Preview</p><p>1:00:00</p></span></span>
+                    <span><p><img src="../styles/images/icons/video2.png" alt="">Learn Java Syntax</p><span><p>Preview</p><p>1:00:00</p></span></span>
+                    <span><p><img src="../styles/images/icons/video2.png" alt="">Learn Java Syntax</p><span><p>Preview</p><p>1:00:00</p></span></span>
+                    <span><p><img src="../styles/images/icons/video2.png" alt="">Learn Java Syntax</p><span><p>Preview</p><p>1:00:00</p></span></span>
+                    <span><p><img src="../styles/images/icons/video2.png" alt="">Learn Java Syntax</p><span><p>Preview</p><p>1:00:00</p></span></span>
+
+                </div>
+            </div>
+            <div class="requirements">
+                <h3>Requirements</h3>
+                <ul>
+                    <li>No professional technical skills</li>
+                    <li>No prior programming experience</li>
+                    <li>ONLY a desire to learn JAVA and a computer for practice</li>
+                </ul>
+            </div>
+            <div class="description-from-author">
+                <h3>Description</h3>
+                <p>Tired of trying to learn Java from several sources? Then this course is for you!</p>
+                <p>Hello friends! My name is Zaur Tregulov, and I am the author of this course.</p>
+                <p>If you are viewing this appeal, then you are most likely already aware that Java is present in all areas of life and solves almost any problem. Server applications, web applications, various programs for the desktop and drum roll are written
+                    in Java. If you want to learn how to write Android applications, then welcome to the world of Java. After all, the vast majority of Android applications are written specifically in Java.</p>
+
+            </div>
+            <div class="author-feedback">
+                <div class="author-stats">
+                    <img src="../styles/images/Erlich.png" alt="">
+                    <p><img src="../styles/images/icons/star.png" alt=""> <b>4.8</b> Teacher rank</p>
+                    <p><img src="../styles/images/icons/badge.png" alt=""> <b>513</b> Feedbacks</p>
+                    <p><img src="../styles/images/icons/personalGrowth.png" alt=""> <b> 2 422</b> Students</p>
+                    <p><img src="../styles/images/icons/video2.png" alt=""> <b>2</b> Courses</p>
+
+                </div>
+                <div class="author-feed">
+                    <h3 class="author-name">Erlich Bachman</h3>
+                    <h5 class="topic">Java</h5>
+                    <p> Hello! My name is Erlich Bachman. I graduated from the Faculty of Cybernetics and have been programming for more than 7 years. But the most important thing is that I started teaching much earlier. As a student, I taught schoolchildren
+                        mathematics and prepared them for admission to universities. It was then that the basic principles of my teaching methodology were formed: </p>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="student-feedbacks">
+            <div class="course-rank">
+                <h3>Students Feedbacks</h3>
+                <div class="rank-stats">
+                    <span>
+                        <h2>4.8</h2>
+                        <img src="../styles/images/icons/star.png" alt="">
+                        <img src="../styles/images/icons/star.png" alt="">
+                        <img src="../styles/images/icons/star.png" alt="">
+                        <img src="../styles/images/icons/star.png" alt="">
+                        <img src="../styles/images/icons/halfStar.png" alt="">
+                        <p>Course Rank</p>
+                    </span>
+
+
+                    <!-- </span> -->
+                </div>
+            </div>
+            <div class="list-of-student-feedbacks">
+                <h3>Feedbacks</h3>
+                <div class="single-feedback">
+                    <span>
+                                <img class="feedback-name"src="../styles/images/Erlich.png" alt="">
+                                <h4>Erlich Bachman</h4>
+                            </span>
+                    <span>
+                            <span>
+                                                    <img src="../styles/images/icons/star.png" alt="">
+                                                    <img src="../styles/images/icons/star.png" alt="">
+                                                    <img src="../styles/images/icons/star.png" alt="">
+                                                    <img src="../styles/images/icons/star.png" alt="">
+                                                    <img src="../styles/images/icons/halfStar.png" alt="">
+                                                </span>
+                    <p>Parses this programming language in sufficient detail. Starting with theory, gradually connecting practice. A big plus for introducing the theory. This knowledge, I just did not have enough. And also, in this course, the teacher sets
+                        homework on topics covered, which allows you to apply all the methods studied in practice</p>
+                    </span>
+                </div>
+                <div class="single-feedback">
+                    <span>
+                                    <img class="feedback-name"src="../styles/images/Erlich.png" alt="">
+                                    <h4>Erlich Bachman</h4>
+                                </span>
+                    <span>
+                                <span>
+                                                        <img src="../styles/images/icons/star.png" alt="">
+                                                        <img src="../styles/images/icons/star.png" alt="">
+                                                        <img src="../styles/images/icons/star.png" alt="">
+                                                        <img src="../styles/images/icons/star.png" alt="">
+                                                        <img src="../styles/images/icons/halfStar.png" alt="">
+                                                    </span>
+                    <p>Parses this programming language in sufficient detail. Starting with theory, gradually connecting practice. A big plus for introducing the theory. This knowledge, I just did not have enough. And also, in this course, the teacher sets
+                        homework on topics covered, which allows you to apply all the methods studied in practice</p>
+                    </span>
+                </div>
+                <div class="single-feedback">
+                    <span>
+                                        <img class="feedback-name"src="../styles/images/Erlich.png" alt="">
+                                        <h4>Erlich Bachman</h4>
+                                    </span>
+                    <span>
+                                    <span>
+                                                            <img src="../styles/images/icons/star.png" alt="">
+                                                            <img src="../styles/images/icons/star.png" alt="">
+                                                            <img src="../styles/images/icons/star.png" alt="">
+                                                            <img src="../styles/images/icons/star.png" alt="">
+                                                            <img src="../styles/images/icons/halfStar.png" alt="">
+                                                        </span>
+                    <p>Parses this programming language in sufficient detail. Starting with theory, gradually connecting practice. A big plus for introducing the theory. This knowledge, I just did not have enough. And also, in this course, the teacher sets
+                        homework on topics covered, which allows you to apply all the methods studied in practice</p>
+                    </span>
+                </div>
+                <div class="single-feedback">
+                    <span>
+                                            <img class="feedback-name"src="../styles/images/Erlich.png" alt="">
+                                            <h4>Erlich Bachman</h4>
+                                        </span>
+                    <span>
+                                        <span>
+                                                                <img src="../styles/images/icons/star.png" alt="">
+                                                                <img src="../styles/images/icons/star.png" alt="">
+                                                                <img src="../styles/images/icons/star.png" alt="">
+                                                                <img src="../styles/images/icons/star.png" alt="">
+                                                                <img src="../styles/images/icons/halfStar.png" alt="">
+                                                            </span>
+                    <p>Parses this programming language in sufficient detail. Starting with theory, gradually connecting practice. A big plus for introducing the theory. This knowledge, I just did not have enough. And also, in this course, the teacher sets
+                        homework on topics covered, which allows you to apply all the methods studied in practice</p>
+                    </span>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="left">
+            <img src="../styles/images/icons/ThreeBv2.png" alt="">
+            <p>Copyright &#169; 2019 ThreeB, Inc.</p>
+        </div>
+        <div class="right">
+            <a href="#" class="condition1">Terms and Conditions</a>
+            <a href="#" class="condition2">Privacy Policy and Cookie Policy</a>
+            <a href="#" class="condition3">Intellectual Property</a>
+
+        </div>
+    </footer>
+    {{end}}
+    <script src="../scripts/navBar.js"></script>
+    <script src="../scripts/Collapse.js"></script>
+</body>
+
+</html>

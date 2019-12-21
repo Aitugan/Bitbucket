@@ -1,0 +1,235 @@
+ @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+ * {
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+ }
+ 
+ body {
+     font-family: 'Poppins', Arial, Helvetica, sans-serif;
+     margin: 0;
+ }
+ 
+ nav {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     min-height: 8vh;
+     font-family: 'Poppins', sans-serif;
+ }
+ 
+ #navbar {
+     background: linear-gradient(to left, rgb(0, 21, 88) 0%, #0ddbdb 100%);
+     position: fixed;
+     top: 0;
+     width: 100%;
+     transition: top 0.3s;
+     z-index: 20;
+ }
+ 
+ #navbar a {
+     float: left;
+     display: block;
+     color: white;
+     text-align: center;
+     padding: 20px;
+     text-decoration: none;
+ }
+ 
+ #navbar a:hover {
+     color: rgb(0, 247, 255);
+ }
+ 
+ .logo {
+     display: flex;
+     justify-content: space-around;
+ }
+ 
+ .logo img {
+     margin-right: 2em;
+ }
+ 
+ .logo h4 {
+     margin-top: 0.5em;
+ }
+ 
+ .icons {
+     padding: 40px;
+ }
+ 
+ .icon1 {
+     background: url(images/icons/free.png) no-repeat center;
+ }
+ 
+ .icon2 {
+     background: url(images/icons/goal.png) no-repeat center;
+ }
+ 
+ .icon3 {
+     background: url(images/icons/university.png) no-repeat center;
+ }
+ 
+ .logo {
+     color: rgb(226, 225, 226);
+     text-transform: uppercase;
+     letter-spacing: 5px;
+     font-size: 20px;
+ }
+ 
+ .nav-links {
+     display: flex;
+     justify-content: space-around;
+     width: 30%;
+ }
+ 
+ .nav-links li {
+     list-style: none;
+ }
+ 
+ .nav-links a {
+     color: rgb(226, 226, 226);
+     text-decoration: none;
+     letter-spacing: 3px;
+     font-weight: bold;
+     font-size: 14px;
+ }
+ 
+ .burger {
+     display: none;
+     cursor: pointer;
+ }
+ 
+ .burger div {
+     width: 25px;
+     height: 3px;
+     background-color: rgb(226, 226, 226);
+     margin: 5px;
+     transition: all 0.3s ease;
+ }
+ 
+ @media screen and (max-width:950px) {
+     .nav-links {
+         width: 60%;
+     }
+ }
+ 
+ @media screen and (max-width:760px) {
+     body {
+         overflow-x: hidden;
+     }
+     .nav-links {
+         position: absolute;
+         right: 0px;
+         height: 105vh;
+         top: 8vh;
+         background: linear-gradient(to bottom left, rgb(0, 21, 88) 0%, #0ddbdb 100%);
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 40%;
+         transform: translateX(100%);
+         transition: transform 0.5s ease-in;
+     }
+     .nav-links li {
+         opacity: 0;
+     }
+     .burger {
+         display: block;
+     }
+ }
+ 
+ .nav-active {
+     transform: translate(0%);
+ }
+ 
+ @keyframes navLinkFade {
+     from {
+         opacity: 0;
+         transform: translateX(50px);
+     }
+     to {
+         opacity: 1;
+         transform: translateX(0px);
+     }
+ }
+ 
+ .toggle .line1 {
+     transform: rotate(-45deg) translate(-5px, 6px);
+ }
+ 
+ .toggle .line2,
+ .toggle .line4 {
+     opacity: 0;
+ }
+ 
+ .toggle .line3 {
+     transform: rotate(45deg) translate(-5px, -6px);
+ }
+ 
+ .header {
+     padding: 130px;
+     text-align: center;
+     background: url("https://i.udemycdn.com/notices/home_banner/image/5e733138-2116-4fdd-a927-c27a916dc488.jpg") no-repeat center;
+     color: white;
+ }
+ 
+ .header h1 {
+     font-size: 40px;
+     margin: 2em;
+ }
+ 
+ .navbar {
+     overflow: hidden;
+     background: linear-gradient(to left, rgb(0, 21, 88) 0%, #0194b9 100%);
+     display: flex;
+     justify-content: space-around;
+ }
+ 
+ .navbar span {
+     display: block;
+     color: white;
+     text-align: center;
+     padding: 14px 20px;
+ }
+ 
+ .row {
+     display: flex;
+     flex-wrap: wrap;
+ }
+ 
+ .side {
+     flex: 30%;
+     background-color: #f1f1f1;
+     padding: 20px;
+ }
+ 
+ .main {
+     flex: 70%;
+     background-color: white;
+     padding: 20px;
+ }
+ 
+ .fakeimg {
+     background-color: #aaa;
+     width: 100%;
+     padding: 20px;
+ }
+ 
+ .footer {
+     padding: 20px;
+     text-align: center;
+     background: #ddd;
+ }
+ 
+ @media screen and (max-width: 700px) {
+     .row {
+         flex-direction: column;
+     }
+ }
+ 
+ @media screen and (max-width: 400px) {
+     .navbar a {
+         float: none;
+         width: 100%;
+     }
+ }

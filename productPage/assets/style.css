@@ -1,0 +1,264 @@
+body {
+    overflow-y: unset;
+}
+
+#subnavbar {
+    background: linear-gradient(to left, rgb(182, 203, 243) 0%, rgb(231, 238, 252) 100%);
+}
+
+.course-header {
+    background: rgb(69, 71, 75);
+    color: #ECF3FF;
+    display: flex;
+    padding: 4.5em 4em 4.5em 12em;
+    font-family: Helvetica, Arial, sans-serif;
+    justify-content: space-between;
+}
+
+.course-header-description {
+    /* display: flex; */
+    width: 50%;
+}
+
+.course-header-description h1 {
+    font-size: 40px;
+}
+
+.course-header-description h2 {
+    font-size: 25px;
+}
+
+.course-header-description p {
+    font-size: 15px;
+}
+
+.course-header-description .course-statistics {
+    display: flex;
+    justify-content: space-between;
+    /* width: 70%; */
+}
+
+.course-header-description .course-statistics .badge {
+    display: flex;
+}
+
+.course-header-description .course-statistics .badge img {
+    width: 25px;
+    height: 30px;
+}
+
+
+/* .course-header-description .course-statistics .badge,
+.course-header-description .course-statistics p {
+    padding-top: 0.5em;
+} */
+
+.course-header-description .stars {
+    display: flex;
+    padding-bottom: 1em;
+}
+
+.course-header-description .stars img {
+    width: 20px;
+}
+
+
+/* .course-header-description .course-statistics .badge p {
+    font-size: 15px;
+} */
+
+
+/* /////////////////////////////////////////////////////////////////////////// */
+
+.course-header .course-image {
+    position: absolute;
+    border: 1px solid rgb(129, 129, 129);
+    border-radius: 10px;
+    background-color: #fff;
+    margin-right: 5em;
+    margin-left: 45em;
+}
+
+.course-header .course-image .image {
+    padding: 2em;
+    border: 10px solid #fff;
+    border-radius: 10px;
+}
+
+.course-header .course-image .image .scrollable-description .price {
+    display: flex;
+}
+
+.course-header .course-image .price p {
+    text-decoration: line-through;
+    margin-left: 1em;
+}
+
+.course-header .course-image .image h3 {
+    color: rgb(0, 21, 92);
+}
+
+.course-header .course-image .image p {
+    color: rgb(0, 21, 92);
+    font-size: 12px;
+}
+
+.course-header .course-image .image img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+.course-header .course-image .scrollable-description {}
+
+.course-header .course-image .scrollable-description img {
+    width: 20px;
+    margin-right: 0.5em;
+}
+
+.course-header .course-image .scrollable-description button {
+    /* padding: 0.7em; */
+    border: none;
+    width: 170px;
+    height: 50px;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////// */
+
+
+/* //////////////////////////////////////////////////////////////////////////// */
+
+.course-description .expecteds {
+    background-color: #ECF3FF;
+    border: 1px solid rgb(87, 87, 87);
+    border-radius: 2px;
+    margin: 2em;
+    margin-left: 12em;
+    padding: 2em;
+    width: 45%;
+}
+
+.course-description .expecteds img {
+    width: 20px;
+}
+
+.course-description .course-materials {
+    width: 45%;
+    margin-left: 12em;
+}
+
+.course-description .course-materials span {
+    display: flex;
+    margin-left: 1em;
+}
+
+.course-description .course-materials span span {
+    margin-left: 10em;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #000; */
+}
+
+.course-description .course-materials span p {
+    margin-left: 1.5em;
+}
+
+.course-description .course-materials .content span span {
+    margin-left: 14em;
+}
+
+.course-description .course-materials .content span {
+    /* height: 3em; */
+}
+
+
+/* .course-description, */
+
+.course-description .requirements,
+.course-description .description-from-author,
+.author-feedback,
+.student-feedbacks {
+    margin-top: 3em;
+    margin-left: 12em;
+    width: 50%;
+}
+
+.course-description .description-from-author {}
+
+
+/* //////////////////////////// */
+
+.author-feedback {
+    display: flex;
+    justify-content: space-between;
+}
+
+.author-feedback .author-feed {
+    width: 65%;
+}
+
+.author-feedback .author-stats img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.author-feedback .author-stats p img {
+    width: 15px;
+    height: 15px;
+}
+
+.author-feedback .author-stats p {
+    font-size: 15px;
+}
+
+.author-feedback h3 {
+    color: rgb(0, 85, 212);
+}
+
+.student-feedbacks .course-rank .rank-stats {
+    display: flex;
+}
+
+.student-feedbacks .course-rank .rank-stats .progress {
+    width: 50%;
+}
+
+.student-feedbacks .course-rank .rank-stats img {
+    width: 25px;
+}
+
+.student-feedbacks .course-rank .rank-stats .progress-bar {
+    width: 100%;
+    background-color: grey;
+}
+
+.student-feedbacks .course-rank .rank-stats .bar-inside {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+}
+
+.student-feedbacks .list-of-student-feedbacks {
+    margin-top: 3em;
+}
+
+.student-feedbacks .list-of-student-feedbacks h3 {
+    margin-bottom: 3em;
+}
+
+.student-feedbacks .list-of-student-feedbacks .single-feedback {
+    border-top: 1px solid rgb(150, 150, 150);
+    margin-bottom: 3em;
+    padding-top: 2em;
+}
+
+.student-feedbacks .list-of-student-feedbacks .single-feedback img {
+    width: 25px;
+}
+
+.student-feedbacks .list-of-student-feedbacks .single-feedback .feedback-name {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}

@@ -1,0 +1,16 @@
+.mostPopularSection h2,
+.feedbackSection h2,
+.connectedUniversities h2 {
+    margin: 1.5em;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to left, rgb(0, 21, 88) 0%, #0ddbdb 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.mostPopular {
+    display: flex;
+    margin: 3em 10%;
+    justify-content: space-between;
+}

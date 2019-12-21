@@ -1,0 +1,106 @@
+body {
+    overflow-x: hidden;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 5%;
+}
+
+.side {
+    flex: 30%;
+    background-color: white;
+    padding: 20px;
+}
+
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+.categories {
+    overflow: hidden;
+}
+
+.categories a {
+    float: left;
+    display: block;
+    color: rgb(66, 66, 66);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-bottom-width: 7px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    margin-bottom: 15px;
+}
+
+.categories a:hover {
+    border-bottom-style: solid;
+    border-bottom-width: 7px;
+    border-bottom-color: rgb(0, 62, 143);
+    border-image: linear-gradient(to left, rgb(0, 21, 88) 0%, #0ddbdb 100%);
+    border-image-slice: 1;
+}
+
+.fakeimg {
+    background-color: rgb(230, 230, 230);
+    width: 100%;
+    padding: 137px 20px;
+}
+
+.about {
+    background: rgb(248, 248, 248);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 3em;
+    /* flex-shrink: 2; */
+    /* margin: 0 5%; */
+}
+
+.cardAbout {
+    margin-left: 10em;
+    width: 25%;
+    flex-shrink: 1;
+    background: #fff;
+    padding: 1em;
+    border: 1px solid rgb(202, 202, 202);
+    display: flex;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 570px) {
+    .cardAbout {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .side {
+        display: none;
+        opacity: 0;
+    }
+    .main {
+        flex: 95%;
+        background-color: white;
+        padding: 20px;
+    }
+    .row {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .cardAbout .icons {
+        display: none;
+    }
+}
