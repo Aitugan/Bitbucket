@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../styles/navBar.css">
     <link rel="stylesheet" href="../styles/usersHeader.css">
-    <!-- <link rel="stylesheet" href="../styles/recommendations.css"> -->
+    <link rel="stylesheet" href="../styles/recommendations.css">
     <link rel="stylesheet" href="../styles/Footer.css">
     <link rel="stylesheet" href="../styles/CardEffect.css">
 
@@ -53,227 +53,55 @@
                 <a href="#">Link</a>
             </div> -->
             <div class="recommendedCourses">
+                {{range .}}
                 <div class="card">
                     <input type="checkbox" name="">
                     <div class="plusSign">+</div>
                     <div class="imgBx">
-                        <img src="../styles/images/Richard.png" alt="your pic">
+                        <img src="{{.Image}}" alt="your pic">
                     </div>
                     <div class="details">
-                        <h2>Aitugan</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, libero maiores quasi voluptatum suscipit officia voluptates a necessitatibus quaerat pariatur?</p>
+                        <h2>{{.Title}}</h2>
+                        <p>{{.Description}}</p>
                     </div>
                 </div>
-                <div class="card">
-                    <input type="checkbox" name="">
-                    <div class="plusSign">+</div>
-                    <div class="imgBx">
-                        <img src="../styles/images/Richard.png" alt="your pic">
-                    </div>
-                    <div class="details">
-                        <h2>Aitugan</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, libero maiores quasi voluptatum suscipit officia voluptates a necessitatibus quaerat pariatur?</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <input type="checkbox" name="">
-                    <div class="plusSign">+</div>
-                    <div class="imgBx">
-                        <img src="../styles/images/Richard.png" alt="your pic">
-                    </div>
-                    <div class="details">
-                        <h2>Aitugan</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, libero maiores quasi voluptatum suscipit officia voluptates a necessitatibus quaerat pariatur?</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <input type="checkbox" name="">
-                    <div class="plusSign">+</div>
-                    <div class="imgBx">
-                        <img src="../styles/images/Richard.png" alt="your pic">
-                    </div>
-                    <div class="details">
-                        <h2>Aitugan</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, libero maiores quasi voluptatum suscipit officia voluptates a necessitatibus quaerat pariatur?</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <input type="checkbox" name="">
-                    <div class="plusSign">+</div>
-                    <div class="imgBx">
-                        <img src="../styles/images/Richard.png" alt="your pic">
-                    </div>
-                    <div class="details">
-                        <h2>Aitugan</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, libero maiores quasi voluptatum suscipit officia voluptates a necessitatibus quaerat pariatur?</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <input type="checkbox" name="">
-                    <div class="plusSign">+</div>
-                    <div class="imgBx">
-                        <img src="../styles/images/Richard.png" alt="your pic">
-                    </div>
-                    <div class="details">
-                        <h2>Aitugan</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, libero maiores quasi voluptatum suscipit officia voluptates a necessitatibus quaerat pariatur?</p>
-                    </div>
-                </div>
+                {{end}}
+                
             </div>
         </section>
 
         <section class="course-list">
             <h2>All courses on topic "Development"</h2>
+            <!-- ....................................................... -->
+            {{ range .}}
             <div class="single-course">
-                <img class="course-image" src="../styles/images/java.jpeg" alt="">
+                <img class="course-image" src="{{.Image}}" alt="">
                 <span>
-                    <h1>Complete Java course 2019</h1>
+                    <h1>{{.Title}}</h1>
                     <span class="badge">
                             <img src="../styles/images/icons/badge3.png" alt="">
                             <p>Sales Leader</p>
                 </span>
-                <h5>Erlich Bachman</h5>
+                <h5>{{.Author}} </h5>
                 <span class="stars">
                         <img src="../styles/images/icons/star.png" alt="">
                         <img src="../styles/images/icons/star.png" alt="">
                         <img src="../styles/images/icons/star.png" alt="">
                         <img src="../styles/images/icons/star.png" alt="">
                         <img src="../styles/images/icons/halfStar.png" alt="">
-                        <p>4.5(2500 feedbacks)</p>
+                        <p>{{.Rating}} ({{.RatesAmount}} feedbacks)</p>
                 </span>
                 <span class="price">
-                        <h3>$11.99</h3>
+                        <h3>${{.Price}} </h3>
                         <p>$99.99</p>
                     </span>
 
 
                 </span>
             </div>
-            <div class="single-course">
-                <img class="course-image" src="../styles/images/java.jpeg" alt="">
-                <span>
-                        <h1>Complete Java course 2019</h1>
-                        <span class="badge">
-                                <img src="../styles/images/icons/badge3.png" alt="">
-                                <p>Sales Leader</p>
-                    </span>
-                <h5>Erlich Bachman</h5>
-                <span class="stars">
-                            <img src="../styles/images/icons/star.png" alt="">
-                            <img src="../styles/images/icons/star.png" alt="">
-                            <img src="../styles/images/icons/star.png" alt="">
-                            <img src="../styles/images/icons/star.png" alt="">
-                            <img src="../styles/images/icons/halfStar.png" alt="">
-                            <p>4.5(2500 feedbacks)</p>
-                    </span>
-                <span class="price">
-                            <h3>$11.99</h3>
-                            <p>$99.99</p>
-                        </span>
+            {{end}}
+            <!-- ////////................/////////////////////// -->
 
-
-                </span>
-            </div>
-            <div class="single-course">
-                <img class="course-image" src="../styles/images/java.jpeg" alt="">
-                <span>
-                            <h1>Complete Java course 2019</h1>
-                            <span class="badge">
-                                    <img src="../styles/images/icons/badge3.png" alt="">
-                                    <p>Sales Leader</p>
-                        </span>
-                <h5>Erlich Bachman</h5>
-                <span class="stars">
-                                <img src="../styles/images/icons/star.png" alt="">
-                                <img src="../styles/images/icons/star.png" alt="">
-                                <img src="../styles/images/icons/star.png" alt="">
-                                <img src="../styles/images/icons/star.png" alt="">
-                                <img src="../styles/images/icons/halfStar.png" alt="">
-                                <p>4.5(2500 feedbacks)</p>
-                        </span>
-                <span class="price">
-                                <h3>$11.99</h3>
-                                <p>$99.99</p>
-                            </span>
-
-
-                </span>
-            </div>
-            <div class="single-course">
-                <img class="course-image" src="../styles/images/java.jpeg" alt="">
-                <span>
-                                <h1>Complete Java course 2019</h1>
-                                <span class="badge">
-                                        <img src="../styles/images/icons/badge3.png" alt="">
-                                        <p>Sales Leader</p>
-                            </span>
-                <h5>Erlich Bachman</h5>
-                <span class="stars">
-                                    <img src="../styles/images/icons/star.png" alt="">
-                                    <img src="../styles/images/icons/star.png" alt="">
-                                    <img src="../styles/images/icons/star.png" alt="">
-                                    <img src="../styles/images/icons/star.png" alt="">
-                                    <img src="../styles/images/icons/halfStar.png" alt="">
-                                    <p>4.5(2500 feedbacks)</p>
-                            </span>
-                <span class="price">
-                                    <h3>$11.99</h3>
-                                    <p>$99.99</p>
-                                </span>
-
-
-                </span>
-            </div>
-            <div class="single-course">
-                <img class="course-image" src="../styles/images/java.jpeg" alt="">
-                <span>
-                                    <h1>Complete Java course 2019</h1>
-                                    <span class="badge">
-                                            <img src="../styles/images/icons/badge3.png" alt="">
-                                            <p>Sales Leader</p>
-                                </span>
-                <h5>Erlich Bachman</h5>
-                <span class="stars">
-                                        <img src="../styles/images/icons/star.png" alt="">
-                                        <img src="../styles/images/icons/star.png" alt="">
-                                        <img src="../styles/images/icons/star.png" alt="">
-                                        <img src="../styles/images/icons/star.png" alt="">
-                                        <img src="../styles/images/icons/halfStar.png" alt="">
-                                        <p>4.5(2500 feedbacks)</p>
-                                </span>
-                <span class="price">
-                                        <h3>$11.99</h3>
-                                        <p>$99.99</p>
-                                    </span>
-
-
-                </span>
-            </div>
-            <div class="single-course">
-                <img class="course-image" src="../styles/images/java.jpeg" alt="">
-                <span>
-                                        <h1>Complete Java course 2019</h1>
-                                        <span class="badge">
-                                                <img src="../styles/images/icons/badge3.png" alt="">
-                                                <p>Sales Leader</p>
-                                    </span>
-                <h5>Erlich Bachman</h5>
-                <span class="stars">
-                                            <img src="../styles/images/icons/star.png" alt="">
-                                            <img src="../styles/images/icons/star.png" alt="">
-                                            <img src="../styles/images/icons/star.png" alt="">
-                                            <img src="../styles/images/icons/star.png" alt="">
-                                            <img src="../styles/images/icons/halfStar.png" alt="">
-                                            <p>4.5(2500 feedbacks)</p>
-                                    </span>
-                <span class="price">
-                                            <h3>$11.99</h3>
-                                            <p>$99.99</p>
-                                        </span>
-
-
-                </span>
-            </div>
         </section>
     </main>
 

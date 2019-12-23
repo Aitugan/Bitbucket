@@ -60,117 +60,30 @@
                 <div class="stats">
 
                     <!-- Dashboard -->
-                    <span class="ID">ID</span>
-                    <span class="When">When</span>
-                    <span class="Title">Title</span>
-                    <span class="Categories">Categories</span>
-                    <span class="Comments">Comments</span>
-                    <span class="Author">Author</span>
-                    <span class="view"></span>
-                    <span class="edit"></span>
-                    <span class="delete"></span>
+                    <span class="IDNav">ID</span>
+                    <span class="WhenNav">Price</span>
+                    <span class="TitleNav">Title</span>
+                    <span class="CategoriesNav">Categories</span>
+                    <span class="CommentsNav">Comments</span>
+                    <span class="AuthorNav">Author</span>
+                    <span class="viewNav">AuthorID</span>
+                    <span class="editNav"></span>
+                    <span class="deleteNav"></span>
 
                 </div>
-
+                {{range .}}
                 <div class="stats">
-                    <span class="ID"> 12</span>
-                    <span class="When"> 24.02.2018</span>
-                    <span class="Title"> Science</span>
-                    <span class="Categories"> Programming</span>
-                    <span class="Comments"> 10</span>
-                    <span class="Author"> Tony</span>
-                    <span class="view"> <img src="../styles/images/icons/view.png" alt="">View</span>
-                    <span class="edit"> <img src="../styles/images/icons/edit.png" alt="">Edit</span>
-                    <span class="delete"> <img src="../styles/images/icons/delete.png" alt="">Delete</span>
-
-
+                    <span class="ID">{{.CourseId}} </span>
+                    <span class="When">{{.Price}}</span>
+                    <span class="Title">{{.Title}} </span>
+                    <span class="Categories">Programming</span>
+                    <span class="Comments">10</span>
+                    <span class="Author">{{.Author}} </span>
+                    <span class="view"> <img src="../styles/images/icons/view.png" alt=""><a href="">View</a></span>
+                    <span class="edit"> <img src="../styles/images/icons/edit.png" alt=""><a href="https://localhost:8080/edit">Edit</a></span>
+                    <span class="delete"> <img src="../styles/images/icons/delete.png" alt=""><a href="https://localhost:8080/delete?id={{.CourseId}}">Delete</a></span>
                 </div>
-                <div class="stats">
-                    <span class="ID"> 12</span>
-                    <span class="When"> 24.02.2018</span>
-                    <span class="Title"> Science</span>
-                    <span class="Categories"> Programming</span>
-                    <span class="Comments"> 10</span>
-                    <span class="Author"> Tony</span>
-                    <span class="view"> <img src="../styles/images/icons/view.png" alt="">View</span>
-                    <span class="edit"> <img src="../styles/images/icons/edit.png" alt="">Edit</span>
-                    <span class="delete"> <img src="../styles/images/icons/delete.png" alt="">Delete</span>
-
-                </div>
-                <div class="stats">
-                    <span class="ID"> 12</span>
-                    <span class="When"> 24.02.2018</span>
-                    <span class="Title"> Science</span>
-                    <span class="Categories"> Programming</span>
-                    <span class="Comments"> 10</span>
-                    <span class="Author"> Tony</span>
-                    <span class="view"> <img src="../styles/images/icons/view.png" alt="">View</span>
-                    <span class="edit"> <img src="../styles/images/icons/edit.png" alt="">Edit</span>
-                    <span class="delete"> <img src="../styles/images/icons/delete.png" alt="">Delete</span>
-
-                </div>
-                <div class="stats">
-                    <span class="ID"> 12</span>
-                    <span class="When"> 24.02.2018</span>
-                    <span class="Title"> Science</span>
-                    <span class="Categories"> Programming</span>
-                    <span class="Comments"> 10</span>
-                    <span class="Author"> Tony</span>
-                    <span class="view"> <img src="../styles/images/icons/view.png" alt="">View</span>
-                    <span class="edit"> <img src="../styles/images/icons/edit.png" alt="">Edit</span>
-                    <span class="delete"> <img src="../styles/images/icons/delete.png" alt="">Delete</span>
-
-                </div>
-                <div class="stats">
-                    <span class="ID"> 12</span>
-                    <span class="When"> 24.02.2018</span>
-                    <span class="Title"> Science</span>
-                    <span class="Categories"> Programming</span>
-                    <span class="Comments"> 10</span>
-                    <span class="Author"> Tony</span>
-                    <span class="view"> <img src="../styles/images/icons/view.png" alt="">View</span>
-                    <span class="edit"> <img src="../styles/images/icons/edit.png" alt="">Edit</span>
-                    <span class="delete"> <img src="../styles/images/icons/delete.png" alt="">Delete</span>
-
-                </div>
-                <div class="stats">
-                    <span class="ID"> 12</span>
-                    <span class="When"> 24.02.2018</span>
-                    <span class="Title"> Science</span>
-                    <span class="Categories"> Programming</span>
-                    <span class="Comments"> 10</span>
-                    <span class="Author"> Tony</span>
-                    <span class="view"> <img src="../styles/images/icons/view.png" alt="">View</span>
-                    <span class="edit"> <img src="../styles/images/icons/edit.png" alt="">Edit</span>
-                    <span class="delete"> <img src="../styles/images/icons/delete.png" alt="">Delete</span>
-
-
-                </div>
-                <div class="stats">
-                    <span class="ID"> 12</span>
-                    <span class="When"> 24.02.2018</span>
-                    <span class="Title"> Science</span>
-                    <span class="Categories"> Programming</span>
-                    <span class="Comments"> 10</span>
-                    <span class="Author"> Tony</span>
-                    <span class="view"> <img src="../styles/images/icons/view.png" alt="">View</span>
-                    <span class="edit"> <img src="../styles/images/icons/edit.png" alt="">Edit</span>
-                    <span class="delete"> <img src="../styles/images/icons/delete.png" alt="">Delete</span>
-
-
-                </div>
-                <div class="stats">
-                    <span class="ID"> 12</span>
-                    <span class="When"> 24.02.2018</span>
-                    <span class="Title"> Science</span>
-                    <span class="Categories"> Programming</span>
-                    <span class="Comments"> 10</span>
-                    <span class="Author"> Tony</span>
-                    <span class="view"> <img src="../styles/images/icons/view.png" alt="">View</span>
-                    <span class="edit"> <img src="../styles/images/icons/edit.png" alt="">Edit</span>
-                    <span class="delete"> <img src="../styles/images/icons/delete.png" alt="">Delete</span>
-
-                </div>
+                {{end}}
             </div>
         </div>
 
@@ -192,7 +105,30 @@
     </footer>
 
 
+    <!-- <script type="text/javascript">
+        let deleteEl = document.getElementsByClassName('delbtn');
+        let id = document.getElementsByClassName('ID');
+        console.log(id);
 
+        for (let i = 0; i < deleteEl.length; i++) {
+            //for (let j = 0; j < deleteEl.length; j++) {
+
+            deleteEl[i].onclick = function() {
+                //{
+                //    {
+                //        DeleteElem(id[i])
+                //    }
+                //}
+                console.log(id[i]);
+                //{
+                //    {
+                //        end
+                //    }
+                //}
+            };
+            //}
+        }
+    </script> -->
     <script src="../scripts/navBar.js"></script>
 </body>
 
