@@ -53,22 +53,6 @@
      margin-top: 0.5em;
  }
  
- .icons {
-     padding: 40px;
- }
- 
- .icon1 {
-     background: url(images/icons/free.png) no-repeat center;
- }
- 
- .icon2 {
-     background: url(images/icons/goal.png) no-repeat center;
- }
- 
- .icon3 {
-     background: url(images/icons/university.png) no-repeat center;
- }
- 
  .logo {
      color: rgb(226, 225, 226);
      text-transform: uppercase;
@@ -142,7 +126,7 @@
      transform: translate(0%);
  }
  
- @keyframes navLinkFade {
+ @keyframes navbaranim {
      from {
          opacity: 0;
          transform: translateX(50px);

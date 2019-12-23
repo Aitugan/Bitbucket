@@ -1,0 +1,108 @@
+.recommendedCourses {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+}
+
+.recommendedCourses .card {
+    margin-bottom: 2em;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(248, 248, 248);
+    width: 100%;
+    padding: 3em;
+}
+
+.icons {
+    padding: 40px;
+}
+
+.icon1 {
+    background: url(../styles/images/icons/free.png) no-repeat center;
+}
+
+.icon2 {
+    background: url(../styles/images/icons/goal.png) no-repeat center;
+}
+
+.icon3 {
+    background: url(../styles/images/icons/university.png) no-repeat center;
+}
+
+.cardAbout {
+    /* margin-left: 10em; */
+    width: 30%;
+    flex-shrink: 1;
+    background: #fff;
+    padding: 1em;
+    border: 1px solid rgb(202, 202, 202);
+    display: flex;
+    align-items: flex-start;
+}
+
+.connectedUniversities {
+    background: rgb(248, 248, 248);
+    padding: 3em;
+}
+
+.connectedUniversities h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.universityLogos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.universityLogos img {
+    width: 200px;
+}
+
+@media screen and (max-width: 950px) {
+    .cardAbout .icons {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .cardAbout .icons {
+        display: unset;
+    }
+    .cardAbout {
+        margin: 2em 0 0 5em;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:670px) {
+    .header {
+        padding-bottom: 10%;
+    }
+}
+
+@media screen and (max-width:490px) {
+    .cardAbout .icons {
+        display: none;
+    }
+    .cardAbout {
+        margin-left: 0em;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .cardAbout {
+        min-width: 150px;
+        width: 100%;
+        margin: 0;
+    }
+}

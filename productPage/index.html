@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    
     <link rel="stylesheet" href="../styles/navBar.css">
-    <link rel="stylesheet" href="../styles/usersHeader.css">
+<link rel="stylesheet" href="../styles/usersHeader.css">
     <link rel="stylesheet" href="../styles/Footer.css">
     <link rel="stylesheet" href="../styles/Collapse.css">
 
 
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="../styles/productPage.css">
 </head>
 
-<body>{{range .}}
+<body>
     <header>
         <nav id="navbar">
 
@@ -110,7 +111,7 @@
 
             <div class="course-header-description">
                 <span>
-                <h1>{{.Title}}</h1>
+                <!-- <h1></h1> -->
                <!-- !!!!!!!!!! -->
                 <h2>Изучение Java на простых примерах для новичков. Теория, практика, домашние задания и их разборы.</h2>
             </span>
@@ -126,8 +127,8 @@
                             <img src="../styles/images/icons/star.png" alt="">
                             <img src="../styles/images/icons/halfStar.png" alt="">
                     </span>
-                <p>{{.Rating}}({{.RatesAmount}} rates)</p>
-                <p>{{.RegisteredStudents}} students registered</p>
+                <!-- <p>( rates)</p> -->
+                <!-- <p> students registered</p> -->
                 </span>
             </div>
 
@@ -136,10 +137,10 @@
                     <img src="../styles/images/java.jpeg" alt="">
                     <div class="scrollable-description">
                         <span class="price">
-                            <h3>${{.Price}}</h3>
-                            <p>${{.Price}}</p>
+                            <!-- <h3>$</h3> -->
+                            <!-- <p>$</p> -->
                         </span>
-                        <p>{{.Discount}}% OFF</p>
+                        <!-- <p>% OFF</p> -->
                         <p>The price will be accessed for <b>20 more hours!</b></p>
 
                         <button class="add-to-cart">Add to the cart</button>
@@ -147,11 +148,11 @@
                         <p>Money back guarantee - 30 days</p>
                         <span class="course-includes">
                             
-                        <p><img src="../styles/images/icons/video.png" alt=""> {{.Hours}} hours video on demand</p>
-                        <p><img src="../styles/images/icons/document.png" alt=""> {{.Resources}} resource to download</p>
+                       <!--  <p><img src="../styles/images/icons/video.png" alt="">  hours video on demand</p>
+                        <p><img src="../styles/images/icons/document.png" alt="">  resource to download</p>
                         <p><img src="../styles/images/icons/forever.png" alt=""> Full lifetime access</p>
                         <p><img src="../styles/images/icons/smartphone.png" alt=""> Access via mobile devices and TV</p>
-                        <p><img src="../styles/images/icons/certificate.png" alt=""> Certificate of completion - {{.GivesCertificate}}</p>
+                        <p><img src="../styles/images/icons/certificate.png" alt=""> Certificate of completion - </p> -->
                         </span>
                     </div>
                 </div>
@@ -337,7 +338,6 @@
 
         </div>
     </footer>
-    {{end}}
     <script src="../scripts/navBar.js"></script>
     <script src="../scripts/Collapse.js"></script>
 </body>

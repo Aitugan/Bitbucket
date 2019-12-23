@@ -1,5 +1,6 @@
     .container {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         margin: 2em;
     }
@@ -7,7 +8,7 @@
     .profile {
         position: relative;
         width: 60px;
-        margin: 0 1em;
+        margin: 1em 1em;
         height: 60px;
         border-radius: 50%;
         background: url(imgs/jeams.jpg);

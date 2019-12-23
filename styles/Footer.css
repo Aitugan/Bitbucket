@@ -1,22 +1,3 @@
-.connectedUniversities {
-    background: rgb(248, 248, 248);
-    padding: 3em;
-}
-
-.connectedUniversities h2 {
-    display: flex;
-    justify-content: center;
-}
-
-.universityLogos {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.universityLogos img {
-    width: 200px;
-}
-
 footer {
     display: flex;
     justify-content: space-between;

@@ -9,6 +9,7 @@
     height: 270px;
     background: #262626;
     overflow: hidden;
+    min-width: 200px;
 }
 
 input,
@@ -36,6 +37,11 @@ input {
     font-size: 36px;
     box-shadow: 0 0 0 0px #001558;
 }
+
+
+/* input:hover~.plusSign {
+    opacity: 1;
+} */
 
 input:checked~.plusSign {
     box-shadow: 0 0 0 500px #001558;
