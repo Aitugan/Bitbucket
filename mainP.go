@@ -111,7 +111,7 @@ func CreateElem(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("NOT UPDATED")
 		panic(err)
 	}
-	tpl = template.Must(template.ParseGlob("createPage/index.html"))
+	tpl = template.Must(template.ParseGlob("adminPage/index.html"))
 	err = tpl.Execute(w, nil)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
@@ -184,7 +184,7 @@ func CreateData(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(ImageED)
 	fmt.Println(CourseIDED)
 
-	if CourseIDED != 0 {
+	if AuthorED != "" {
 		// var str strings.Builder
 		// str.WriteString("/editData?id=")
 		// str.WriteString(strconv.Itoa(CourseIDED))
