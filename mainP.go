@@ -46,7 +46,6 @@ type Course struct {
 	PriceWithDisc      float64 //
 	Image              string
 	CourseId           int
-	UserID             int
 }
 
 func main() {
@@ -56,20 +55,50 @@ func main() {
 	fsscript := http.FileServer(http.Dir("scripts"))
 	mux2.Handle("/scripts/", http.StripPrefix("/scripts/", fsscript))
 
-	mux2.HandleFunc("/", index)      //main page
-	mux2.HandleFunc("/admin", Admin) //admin page
-	// mux2.HandleFunc("/login", Login) //login
-	// mux2.HandleFunc("/catalog", Catalog)		//catalog page
-	// mux2.HandleFunc("/product", Product)		//product
-	// mux2.HandleFunc("/information", Information)//information
+	mux2.HandleFunc("/", index)                //main page
+	mux2.HandleFunc("/admin", Admin)           //admin page
+	mux2.HandleFunc("/catalog", Catalog)       //catalog page
+	mux2.HandleFunc("/product", Product)       //product
 	mux2.HandleFunc("/delete", DeleteElem)     //delete
 	mux2.HandleFunc("/edit", UpdatePage)       //update
 	mux2.HandleFunc("/create", CreateData)     //update
 	mux2.HandleFunc("/createData", CreateElem) //update
-
-	mux2.HandleFunc("/editData", UpdateElem) //update
+	mux2.HandleFunc("/editData", UpdateElem)   //update
 
 	http.ListenAndServe(":8080", mux2)
+}
+
+func Product(w http.ResponseWriter, r *http.Request) {
+	// fmt.Fprintln(w, "HELLO")
+	ids, ok := r.URL.Query()["id"]
+
+	if !ok || len(ids[0]) < 1 {
+		log.Println("Url Param 'id' is missing")
+		return
+	}
+
+	id, err := strconv.Atoi(ids[0])
+	if err != nil {
+		http.Error(w, http.StatusText(500), 500)
+		return
+	}
+
+	if r.Method != "GET" {
+		http.Error(w, http.StatusText(405), http.StatusMethodNotAllowed)
+		return
+	}
+	courses, err := ReadTableCourse()
+	if err != nil {
+		http.Error(w, http.StatusText(500), 500)
+		return
+	}
+
+	tpl = template.Must(template.ParseGlob("productPage/index.html"))
+
+	err = tpl.Execute(w, courses[id])
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+	}
 }
 
 func CreateElem(w http.ResponseWriter, r *http.Request) {
@@ -311,29 +340,34 @@ func UpdatePage(w http.ResponseWriter, r *http.Request) {
 
 func UpdateElem(w http.ResponseWriter, r *http.Request) {
 
-	rows, err := db.Query("SELECT * FROM CoursesForDevelopment3;")
+	// rows, err := db.Query("SELECT * FROM CoursesForDevelopment3;")
+	// if err != nil {
+	// 	http.Error(w, http.StatusText(500), 500)
+	// 	return
+	// }
+	// defer rows.Close()
+
+	// courses := make([]Course, 0)
+	// for rows.Next() {
+	// 	crs := Course{}
+	// 	err := rows.Scan(&crs.Price, &crs.Title, &crs.Description, &crs.Author, &crs.Rating, &crs.RatesAmount, &crs.RegisteredStudents, &crs.Hours, &crs.Resources, &crs.GivesCertificate, &crs.Discount, &crs.PriceWithDisc, &crs.Image, &crs.CourseId)
+
+	// 	if err != nil {
+	// 		http.Error(w, http.StatusText(500), 500)
+	// 		return
+	// 	}
+	// 	courses = append(courses, crs)
+	// }
+	// if err = rows.Err(); err != nil {
+	// 	http.Error(w, http.StatusText(500), 500)
+	// 	return
+	// }
+	// fmt.Println("here")
+	courses, err := ReadTableCourse()
 	if err != nil {
 		http.Error(w, http.StatusText(500), 500)
 		return
 	}
-	defer rows.Close()
-
-	courses := make([]Course, 0)
-	for rows.Next() {
-		crs := Course{}
-		err := rows.Scan(&crs.Price, &crs.Title, &crs.Description, &crs.Author, &crs.Rating, &crs.RatesAmount, &crs.RegisteredStudents, &crs.Hours, &crs.Resources, &crs.GivesCertificate, &crs.Discount, &crs.PriceWithDisc, &crs.Image, &crs.CourseId, &crs.UserID)
-
-		if err != nil {
-			http.Error(w, http.StatusText(500), 500)
-			return
-		}
-		courses = append(courses, crs)
-	}
-	if err = rows.Err(); err != nil {
-		http.Error(w, http.StatusText(500), 500)
-		return
-	}
-	fmt.Println("here")
 
 	sqlSt := `
 	UPDATE CoursesForDevelopment3
@@ -383,35 +417,42 @@ func UpdateElem(w http.ResponseWriter, r *http.Request) {
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
+	// fmt.Fprintln(w, "HELLO")
 	if r.Method != "GET" {
 		http.Error(w, http.StatusText(405), http.StatusMethodNotAllowed)
 		return
 	}
 
-	rows, err := db.Query("SELECT * FROM CoursesForDevelopment3;")
+	// rows, err := db.Query("SELECT * FROM CoursesForDevelopment3;")
+	// if err != nil {
+	// 	http.Error(w, http.StatusText(500), 500)
+	// 	return
+	// }
+	// defer rows.Close()
+
+	// courses := make([]Course, 0)
+	// for rows.Next() {
+	// 	crs := Course{}
+	// 	err := rows.Scan(&crs.Price, &crs.Title, &crs.Description, &crs.Author, &crs.Rating, &crs.RatesAmount, &crs.RegisteredStudents, &crs.Hours, &crs.Resources, &crs.GivesCertificate, &crs.Discount, &crs.PriceWithDisc, &crs.Image, &crs.CourseId)
+
+	// 	if err != nil {
+	// 		// http.Error(w, http.StatusText(500), 500)
+	// 		fmt.Println(err)
+	// 		return
+	// 	}
+	// 	courses = append(courses, crs)
+	// }
+	// if err = rows.Err(); err != nil {
+	// 	http.Error(w, http.StatusText(500), 500)
+	// 	return
+	// }
+	courses, err := ReadTableCourse()
 	if err != nil {
 		http.Error(w, http.StatusText(500), 500)
 		return
 	}
-	defer rows.Close()
 
-	courses := make([]Course, 0)
-	for rows.Next() {
-		crs := Course{}
-		err := rows.Scan(&crs.Price, &crs.Title, &crs.Description, &crs.Author, &crs.Rating, &crs.RatesAmount, &crs.RegisteredStudents, &crs.Hours, &crs.Resources, &crs.GivesCertificate, &crs.Discount, &crs.PriceWithDisc, &crs.Image, &crs.CourseId, &crs.UserID)
-
-		if err != nil {
-			http.Error(w, http.StatusText(500), 500)
-			return
-		}
-		courses = append(courses, crs)
-	}
-	if err = rows.Err(); err != nil {
-		http.Error(w, http.StatusText(500), 500)
-		return
-	}
-
-	tpl = template.Must(template.ParseGlob("catalogPage/index.html"))
+	tpl = template.Must(template.ParseGlob("mainPage/index.html"))
 
 	err = tpl.Execute(w, courses)
 	if err != nil {
@@ -424,29 +465,34 @@ func Admin(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, http.StatusText(405), http.StatusMethodNotAllowed)
 		return
 	}
-
-	rows, err := db.Query("SELECT * FROM CoursesForDevelopment3;")
+	courses, err := ReadTableCourse()
 	if err != nil {
 		http.Error(w, http.StatusText(500), 500)
 		return
 	}
-	defer rows.Close()
 
-	courses := make([]Course, 0)
-	for rows.Next() {
-		crs := Course{}
-		err := rows.Scan(&crs.Price, &crs.Title, &crs.Description, &crs.Author, &crs.Rating, &crs.RatesAmount, &crs.RegisteredStudents, &crs.Hours, &crs.Resources, &crs.GivesCertificate, &crs.Discount, &crs.PriceWithDisc, &crs.Image, &crs.CourseId, &crs.UserID)
+	// rows, err := db.Query("SELECT * FROM CoursesForDevelopment3;")
+	// if err != nil {
+	// 	http.Error(w, http.StatusText(500), 500)
+	// 	return
+	// }
+	// defer rows.Close()
 
-		if err != nil {
-			http.Error(w, http.StatusText(500), 500)
-			return
-		}
-		courses = append(courses, crs)
-	}
-	if err = rows.Err(); err != nil {
-		http.Error(w, http.StatusText(500), 500)
-		return
-	}
+	// courses := make([]Course, 0)
+	// for rows.Next() {
+	// 	crs := Course{}
+	// 	err := rows.Scan(&crs.Price, &crs.Title, &crs.Description, &crs.Author, &crs.Rating, &crs.RatesAmount, &crs.RegisteredStudents, &crs.Hours, &crs.Resources, &crs.GivesCertificate, &crs.Discount, &crs.PriceWithDisc, &crs.Image, &crs.CourseId)
+
+	// 	if err != nil {
+	// 		http.Error(w, http.StatusText(500), 500)
+	// 		return
+	// 	}
+	// 	courses = append(courses, crs)
+	// }
+	// if err = rows.Err(); err != nil {
+	// 	http.Error(w, http.StatusText(500), 500)
+	// 	return
+	// }
 
 	tpl = template.Must(template.ParseGlob("adminPage/index.html"))
 
@@ -456,31 +502,66 @@ func Admin(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func Catalog(w http.ResponseWriter, r *http.Request) {
-	if r.Method != "GET" {
-		http.Error(w, http.StatusText(405), http.StatusMethodNotAllowed)
-		return
-	}
-
+func ReadTableCourse() ([]Course, error) {
 	rows, err := db.Query("SELECT * FROM CoursesForDevelopment3;")
 	if err != nil {
-		http.Error(w, http.StatusText(500), 500)
-		return
+		// http.Error(w, http.StatusText(500), 500)
+		// return
+		return nil, err
 	}
 	defer rows.Close()
 
 	courses := make([]Course, 0)
 	for rows.Next() {
 		crs := Course{}
-		err := rows.Scan(&crs.Price, &crs.Title, &crs.Description, &crs.Author, &crs.Rating, &crs.RatesAmount, &crs.RegisteredStudents, &crs.Hours, &crs.Resources, &crs.GivesCertificate, &crs.Discount, &crs.PriceWithDisc, &crs.Image, &crs.CourseId, &crs.UserID)
+		err := rows.Scan(&crs.Price, &crs.Title, &crs.Description, &crs.Author, &crs.Rating, &crs.RatesAmount, &crs.RegisteredStudents, &crs.Hours, &crs.Resources, &crs.GivesCertificate, &crs.Discount, &crs.PriceWithDisc, &crs.Image, &crs.CourseId)
 
 		if err != nil {
-			http.Error(w, http.StatusText(500), 500)
-			return
+			// http.Error(w, http.StatusText(500), 500)
+			// return
+			return nil, err
+
 		}
 		courses = append(courses, crs)
 	}
 	if err = rows.Err(); err != nil {
+		// http.Error(w, http.StatusText(500), 500)
+		// return
+		return nil, err
+	}
+	return courses, nil
+}
+
+func Catalog(w http.ResponseWriter, r *http.Request) {
+	if r.Method != "GET" {
+		http.Error(w, http.StatusText(405), http.StatusMethodNotAllowed)
+		return
+	}
+
+	// rows, err := db.Query("SELECT * FROM CoursesForDevelopment3;")
+	// if err != nil {
+	// 	http.Error(w, http.StatusText(500), 500)
+	// 	return
+	// }
+	// defer rows.Close()
+
+	// courses := make([]Course, 0)
+	// for rows.Next() {
+	// 	crs := Course{}
+	// 	err := rows.Scan(&crs.Price, &crs.Title, &crs.Description, &crs.Author, &crs.Rating, &crs.RatesAmount, &crs.RegisteredStudents, &crs.Hours, &crs.Resources, &crs.GivesCertificate, &crs.Discount, &crs.PriceWithDisc, &crs.Image, &crs.CourseId, &crs.UserID)
+
+	// 	if err != nil {
+	// 		http.Error(w, http.StatusText(500), 500)
+	// 		return
+	// 	}
+	// 	courses = append(courses, crs)
+	// }
+	// if err = rows.Err(); err != nil {
+	// 	http.Error(w, http.StatusText(500), 500)
+	// 	return
+	// }
+	courses, err := ReadTableCourse()
+	if err != nil {
 		http.Error(w, http.StatusText(500), 500)
 		return
 	}

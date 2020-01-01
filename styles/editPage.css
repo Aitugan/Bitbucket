@@ -1,0 +1,25 @@
+.regForm {
+    width: 50%;
+}
+
+form {
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+
+.submit {
+    border: 0;
+    padding: 0.5em 1em;
+}
+
+.submit:hover {
+    background: linear-gradient(to left, rgb(6, 0, 88) 0%, #0188aa 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

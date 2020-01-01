@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="../styles/navBar.css">
+    <link rel="stylesheet" href="../styles/Footer.css">
+    <link rel="stylesheet" href="../styles/loginPage.css">
+    <link rel="stylesheet" href="../styles/inputAnim.css">
+    <link rel="stylesheet" href="../styles/editPage.css">
+
 </head>
 
 <body>
-    HELLO
-    <form action="/edit" method="post">
+
+    <!-- <form action="/edit" method="post">
         <input type="text" name="Price"><br>
         <input type="text" name="Title"><br>
         <input type="text" name="Description"><br>
@@ -26,8 +32,271 @@
         <input type="text" name="Image"><br>
         <input type="text" name="CourseID"><br>
         <input type="submit" value="submit">
+    </form> -->
+    <header>
+        <nav id="navbar">
 
-    </form>
+            <div class="logo">
+                <img src="../styles/images/icons/ThreeBv2.png" alt="">
+                <h4>ThreeB</h4>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Project</a></li>
+
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                <div class="line4"></div>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+
+
+        <!-- <section class="regForm"> -->
+        <!-- <form action="/edit" method="post"> -->
+        <!-- <div class="form">
+                <input type="text" name="Price"><br>
+                <label for="Price" class="label-name">
+                        <span class="content-name">Name</span>
+                    </label>
+
+            </div>
+            <div class="form">
+                <input type="text" name="Title"><br>
+                <label for="Title" class="label-name">
+                        <span class="content-name">Name</span>
+                    </label>
+
+            </div>
+            <div class="form">
+                <input type="text" name="Description"><br>
+                <label for="Description" class="label-name">
+                        <span class="content-name">Name</span>
+                    </label>
+
+            </div>
+            <div class="form">
+                <input type="text" name="Author"><br>
+                <label for="Author" class="label-name">
+                        <span class="content-name">Name</span>
+                    </label>
+
+            </div>
+            <div class="form">
+                <input type="text" name="Rating"><br>
+                <label for="Rating" class="label-name">
+                        <span class="content-name">Name</span>
+                    </label>
+
+            </div>
+            <div class="form">
+                <input type="text" name="RatesAmount"><br>
+                <label for="RatesAmount" class="label-name">
+                        <span class="content-name">Name</span>
+                    </label>
+
+            </div>
+            <div class="form">
+                <input type="text" name="RegisteredStudents"><br>
+                <label for="RegisteredStudents" class="label-name">
+                        <span class="content-name">Name</span>
+                    </label>
+
+            </div>
+            <div class="form">
+                <input type="text" name="Hours"><br>
+                <label for="Hours" class="label-name">
+                        <span class="content-name">Name</span>
+                    </label>
+
+            </div>
+            <div class="form">
+                <input type="text" name="Resources"><br>
+                <label for="Resources" class="label-name">
+                        <span class="content-name">Name</span>
+                    </label>
+
+            </div>
+            <div class="form">
+                <input type="text" name="GivesCertificate"><br>
+                <label for="GivesCertificate" class="label-name">
+                        <span class="content-name">Name</span>
+                    </label>
+
+            </div>
+            <div class="form">
+                <input type="text" name="Discount"><br>
+                <label for="Discount" class="label-name">
+                        <span class="content-name">Name</span>
+                    </label>
+
+            </div>
+            <div class="form">
+                <input type="text" name="PriceWithDisc"><br>
+                <label for="PriceWithDisc" class="label-name">
+                        <span class="content-name">Name</span>
+                    </label>
+
+            </div>
+            <div class="form">
+                <input type="text" name="Image"><br>
+                <label for="Image" class="label-name">
+                        <span class="content-name">Name</span>
+                    </label>
+
+            </div>
+            <div class="form">
+                <input type="text" name="CourseID"><br>
+                <label for="CourseID" class="label-name">
+                        <span class="content-name">Name</span>
+                    </label>
+
+            </div>
+            <input type="submit" value="submit"> -->
+        <!-- </form> -->
+        <form action="/edit" method="post">
+            <section class="regForm">
+
+                <div class="form">
+                    <input type="text" value="{{.Price}}" name="Price" autocomplete="off" required/>
+                    <label for="Price" class="label-name">
+                        <span class="content-name">Price</span>
+                    </label>
+
+                </div>
+                <div class="form">
+                    <input type="text" value="{{.Title}}" name="Title" autocomplete="off" required/>
+                    <label for="Title" class="label-name">
+                        <span class="content-name">Title</span>
+                    </label>
+
+                </div>
+                <div class="form">
+                    <input type="text" value="{{.Description}}" name="Description" autocomplete="off" required/>
+                    <label for="Description" class="label-name">
+                        <span class="content-name">Description</span>
+                    </label>
+
+                </div>
+                <div class="form">
+                    <input type="text" value="{{.Author}}" name="Author" autocomplete="off" required/>
+                    <label for="Author" class="label-name">
+                        <span class="content-name">Author</span>
+                    </label>
+
+                </div>
+            </section>
+            <section class="regForm">
+                <div class="form">
+                    <input type="text" value="{{.Rating}}" name="Rating" autocomplete="off" required/>
+                    <label for="Rating" class="label-name">
+                        <span class="content-name">Rating</span>
+                    </label>
+
+                </div>
+                <div class="form">
+                    <input type="text" value="{{.RatesAmount}}" name="RatesAmount" autocomplete="off" required/>
+                    <label for="RatesAmount" class="label-name">
+                        <span class="content-name">RatesAmount</span>
+                    </label>
+
+                </div>
+                <div class="form">
+                    <input type="text" value="{{.RegisteredStudents}}" name="RegisteredStudents" autocomplete="off" required/>
+                    <label for="RegisteredStudents" class="label-name">
+                        <span class="content-name">RegisteredStudents</span>
+                    </label>
+
+                </div>
+                <div class="form">
+                    <input type="text" value="{{.Hours}}" name="Hours" autocomplete="off" required/>
+                    <label for="Hours" class="label-name">
+                        <span class="content-name">Hours</span>
+                    </label>
+
+                </div>
+            </section>
+            <section class="regForm">
+                <div class="form">
+                    <input type="text" value="{{.Resources}}" name="Resources" autocomplete="off" required/>
+                    <label for="Resources" class="label-name">
+                        <span class="content-name">Resources</span>
+                    </label>
+
+                </div>
+                <div class="form">
+                    <input type="text" value="{{.GivesCertificate}}" name="GivesCertificate" autocomplete="off" required/>
+                    <label for="GivesCertificate" class="label-name">
+                        <span class="content-name">GivesCertificate</span>
+                    </label>
+
+                </div>
+                <div class="form">
+                    <input type="text" value="{{.Discount}}" name="Discount" autocomplete="off" required/>
+                    <label for="Discount" class="label-name">
+                        <span class="content-name">Discount</span>
+                    </label>
+
+                </div>
+                <div class="form">
+                    <input type="text" value="{{.PriceWithDisc}}" name="PriceWithDisc" autocomplete="off" required/>
+                    <label for="PriceWithDisc" class="label-name">
+                        <span class="content-name">PriceWithDisc</span>
+                    </label>
+
+                </div>
+            </section>
+            <section class="regForm">
+
+                <div class="form">
+                    <input type="text" value="{{.Image}}" name="Image" autocomplete="off" required/>
+                    <label for="Image" class="label-name">
+                    <span class="content-name">Image</span>
+                </label>
+
+                </div>
+
+                <div class="form">
+                    <input type="text" value="{{.CourseID}}" name="CourseID" autocomplete="off" required/>
+
+                    <label for="CourseID" class="label-name">
+                    <span class="content-name">CourseID</span>
+                </label>
+
+                </div>
+                <input class="submit" type="submit" value="Submit">
+
+            </section>
+        </form>
+
+    </main>
+
+
+    <footer>
+        <div class="left">
+            <img src="../styles/images/icons/ThreeBv2.png" alt="">
+            <p>Copyright &#169; 2019 ThreeB, Inc.</p>
+        </div>
+        <div class="right">
+            <a href="#" class="condition1">Terms and Conditions</a>
+            <a href="#" class="condition2">Privacy Policy and Cookie Policy</a>
+            <a href="#" class="condition3">Intellectual Property</a>
+
+        </div>
+    </footer>
+
+
+
+    <script src="../scripts/codeStrength.js"></script>
+    <script src="../scripts/navBar.js"></script>
 </body>
 
 </html>
